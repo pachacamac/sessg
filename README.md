@@ -12,7 +12,7 @@ Simple Extendable Static Site Generator
 
 ## Idea
 
-The basic idea behind sessg is borrowed from [ijmccallum/Mini-Site-Generator](https://github.com/ijmccallum/Mini-Site-Generator) namely that you write your site components as JavaScript modules. Which looks like this:
+The basic idea behind **sessg** is borrowed from [ijmccallum/Mini-Site-Generator](https://github.com/ijmccallum/Mini-Site-Generator) namely that you write your site components as JavaScript modules. Which looks like this:
 
 ```
 const layout = require("./components/layout.js");
@@ -70,7 +70,7 @@ The additional arguments used are:
 The filename logic is pretty simple:
 
 * If a file ends with `.page.js` it goes through the generator. `example.page.js` becomes `example.html`.
-* If you need a different extension than `html`, name your file e.g. `sitemap.xml-page.js` and it becomes `sitemap.xml`.
+* If you need a different extension than `.html`, name your file e.g. `sitemap.xml-page.js` and it becomes `sitemap.xml`.
 * All other files, unless they're explicitely excluded, are simply copied.
 
 ## Plugin System
@@ -114,6 +114,6 @@ Consider writing your own plugin and submitting a pull request!
 
 If you would like to contribute to **sessg** you're more than welcome to!
 
-* You can suggest *features*, report *bugs* via the issues.
+* You can suggest **features** and report **bugs** via the issues.
 * If you have built a plugin or fixed a bug or added a feature please open a pull request.
 * If you used **sessg** to build a website please consider opening an issue. I'd love to list it here.
