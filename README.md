@@ -52,7 +52,7 @@ As you can see you can provide the `--sd` argument multiple times. It always tak
 
 **All options example:**
 
-*Please note that for the `--watch` argument you need to have [node-watch](https://github.com/yuanchuan/node-watch) installed and for `--serve` you need [cloudhead/node-static](https://github.com/cloudhead/node-static).*
+*Please note that for the `--watch` argument you need to have [node-watch](https://github.com/yuanchuan/node-watch) installed and for `--serve` you need [node-static](https://github.com/cloudhead/node-static).*
 
 `node sessg.js --sd <src> <dst> <skip1> <skip2> --sd <src2> <dst2> --rmd --watch --serve <port:default 8080> --plugins <plugin1> <plugin2>`
 
