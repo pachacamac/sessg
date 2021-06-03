@@ -30,6 +30,10 @@ Notice the html template literal which allows VSCode extensions such as [lit-htm
 
 ## Usage
 
+**Example site**
+
+To build the example site run `node sessg.js --sd example_site/src example_site/dst components`
+
 **Minimal example:**
 
 `node sessg.js --sd <src> <dst>`
