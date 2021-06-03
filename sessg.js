@@ -18,7 +18,7 @@ function generate(src, dst){ // takes a file that is a js module and uses it to 
     output = applyPlugins('beforeGenerate', {src, dst, output});
     if(typeof generator != 'function') generator = generator['render'];
     if(typeof generator != 'function') throw(new Error(`${src} does not export a valid render function!`));
-    output = generator().trim();
+    output = generator({src,dst,output}).trim();
     output = applyPlugins('afterGenerate', {src, dst, output});
   }catch(err){
     error = err
