@@ -1,3 +1,5 @@
+example_site/dst*
+
 # Logs
 logs
 *.log
