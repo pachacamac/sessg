@@ -90,9 +90,9 @@ module.exports = { afterGenerate }
 
 This would simply append the string to each generated file.
 
-The file [plugins/example.js] explains all available event hooks.
+The file [plugins/example.js](plugins/example.js) explains all available event hooks.
 
-The file [plugins/analysis.js] is an example of a useful plugin.
+The file [plugins/analysis.js](plugins/analysis.js) is an example of a useful plugin.
 It highlights files that are slow to generate or bigger than other files.
 It also gives an overview of size by file extension.
 
