@@ -1,7 +1,11 @@
-const {colorLog} = require('../sessg');
 const {statSync} = require('fs');
 const {extname} = require('path');
 let fileSummary = [];
+
+function colorLog(s, fg='white', {bg=false, bright=true}={}){ // console.log with color
+  const colors = {black:30, red:31, green:32, yellow:33, blue:34, magenta:35, cyan:36, white:37};
+  console.log('\x1b[%s%sm%s\x1b[0m', bright ? '1;' : '', colors[fg] + (bg ? 10 : 0), s);
+}
 
 function outliers(arr, sd=2, key=null) {
   const values = arr.map(e=>key?e[key]:e).sort((a, b) => a - b);
