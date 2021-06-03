@@ -167,7 +167,3 @@ if(typeof require !== 'undefined' && require.main === module){ // ran as script 
     }
   }
 }
-
-// TODO: check out https://staticsitegenerators.net/ for name finding
-// http://www.amp-what.com/unicode/search/star
-// 🗑♻🤷😒🤬☠💀🕱🚮🗑️⏳⏱️➙⟹▶⇨▷☞☛➔👁️👀🔭↻⟳🔁🔃⭮🕸️🚩🔛⏻🖧📶📡👷🏭🔧🛠️🔨🪛🧰🪚🛠🔎🛡️📤📦🛸»

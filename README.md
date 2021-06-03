@@ -8,6 +8,7 @@ Simple Extendable Static Site Generator
 2. ...
 3. I thought I'd share it.
 4. Maybe you end up liking it.
+5. Also it's less than 200 lines of code with no dependencies for basic usage. So you can simply add it to your repository and will get one of the fastest build time on netlify and co.
 
 ## Idea
 
@@ -58,6 +59,14 @@ The additional arguments used are:
 * `--serve [port]` serves the dst folders locally, incrementing the port for each dst
 * `--plugins path [path...]` loads one or more plugins (more on that in the plugin section)
 
+## Filenames & Generating
+
+The filename logic is pretty simple:
+
+* If a file ends with `.page.js` it goes through the generator. `example.page.js` becomes `example.html`.
+* If you need a different extension than `html`, name your file e.g. `sitemap.xml-page.js` and it becomes `sitemap.xml`.
+* All other files, unless they're explicitely excluded, are simply copied.
+
 ## Plugin System
 
 I decided to add a simple plugin system that allows you to hook into several events of the static site generation process.
@@ -75,15 +84,30 @@ module.exports = { afterGenerate }
 
 This would simply append the string to each generated file.
 
-More useful examples can be found in the [plugins] directory!
+The file [plugins/example.js] explains all available event hooks.
+
+The file [plugins/analysis.js] is an example of a useful plugin.
+It highlights files that are slow to generate or bigger than other files.
+It also gives an overview of size by file extension.
+
+Consider writing your own plugin and submitting a pull request!
+
 
 ## Screenshots
 
-### Basic usage
+### Basic Usage
 ![basic usage](example_site/src/assets/screenshots/basic_usage.png "basic usage")
 
-### Serve and watch
+### Serve and Watch
 ![serve and watch](example_site/src/assets/screenshots/serve_and_watch.png "serve and watch")
 
-### Analysis plugin
+### Analysis Plugin
 ![analysis plugin](example_site/src/assets/screenshots/analysis_plugin.png "analysis plugin")
+
+## Contribute
+
+If you would like to contribute to **sessg** you're more than welcome to!
+
+* You can suggest *features*, report *bugs* via the issues.
+* If you have built a plugin or fixed a bug or added a feature please open a pull request.
+* If you used **sessg** to build a website please consider opening an issue. I'd love to list it here.
