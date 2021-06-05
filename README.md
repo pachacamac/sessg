@@ -26,7 +26,7 @@ module.exports = function(){
 }
 ```
 
-Notice the html template literal which allows VSCode extensions such as [lit-html](https://marketplace.visualstudio.com/items?itemName=bierner.lit-html) to properly highlight your html code inside the JavaScript template string. This way it doesn't look too ugly and allows you to use the full power of JavaScript to build your pages. No need to learn ugly template languages that are always limited in some way or another!
+Notice the html template literal which allows VSCode extensions such as [lit-html](https://marketplace.visualstudio.com/items?itemName=bierner.lit-html) to properly highlight your html code inside the JavaScript template string. This way it doesn't look too ugly and allows you to use the full power of JavaScript to build your pages. No need to learn horrible template languages that are always limited in some way or another!
 
 ## Usage
 
