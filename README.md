@@ -14,7 +14,7 @@ Simple Extendable Static Site Generator
 
 The basic idea behind **sessg** is borrowed from [ijmccallum/Mini-Site-Generator](https://github.com/ijmccallum/Mini-Site-Generator) namely that you write your site components as JavaScript modules. Which looks like this:
 
-```
+```javascript
 const layout = require("./components/layout.js");
 
 module.exports = function(){
@@ -79,7 +79,7 @@ I decided to add a simple plugin system that allows you to hook into several eve
 This allows you for example to calculate metrics (as seen in the analysis plugin) or even change some of the behavior of sessg.
 A very simple plugin looks like this:
 
-```
+```javascript
 function afterGenerate({file, output}){
   return html`${output}
   <!-- ${file} generated @${new Date().toISOString()}. ${output.length} characters -->
