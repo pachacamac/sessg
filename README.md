@@ -38,7 +38,7 @@ To build the example site run `node sessg.js --sd example_site/src example_site/
 
 `node sessg.js --sd <src> <dst>`
 
-`node sessg.js --sd ./site ./dist`
+`node sessg.js --sd site dist`
 
 Where `src` is your source path and `dst` is your destination path. 
 
