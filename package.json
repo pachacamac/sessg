@@ -1,0 +1,31 @@
+{
+  "name": "sessg",
+  "version": "1.0.0",
+  "description": "Simple Extendable Static Site Generator",
+  "main": "sessg.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pachacamac/sessg.git"
+  },
+  "keywords": [
+    "Simple",
+    "Extendable",
+    "Static Site Generator"
+  ],
+  "author": "pachacamac",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pachacamac/sessg/issues"
+  },
+  "homepage": "https://github.com/pachacamac/sessg#readme",
+  "bin": {
+    "sessg": "sessg.js"
+  },
+  "dependencies": {
+    "node-static": "^0.7.11",
+    "node-watch": "^0.7.3"
+  }
+}
