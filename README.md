@@ -30,6 +30,22 @@ Notice the html template literal which allows VSCode extensions such as [lit-htm
 
 ## Usage
 
+**NPM**
+
+Using `sessg` just got a bit easier since it's pushed to `npm` now! :tada:
+
+So simply add `sessg` to your dev dependencies by running e.g. `npm install -D sessg` and then add scripts to your `package.json` for your convenience:
+
+```json
+  "scripts": {
+    "serve": "sessg --sd src dst --serve 8080 --watch --rmd --plugins node_modules/sessg/plugins/analysis.js",
+    "build": "sessg --sd src dst --rmd --plugins node_modules/sessg/plugins/analysis.js"
+  },
+```
+
+Assuming your source is in the `src` directory and you want it built into the `dst` directory.
+
+
 **Example site**
 
 To build the example site run `node sessg.js --sd example_site/src example_site/dst components`
