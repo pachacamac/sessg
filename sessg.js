@@ -8,8 +8,9 @@ const plugins = [];
 function applyPlugins(hook, args={}){ // applies plugins that match the hook definitions
   args = Object.assign({output: ''}, args);
   return plugins.filter(e=>(typeof e.plugin[hook] === 'function')).reduce((s,e)=>{
-    try{ args.output = e.plugin[hook](args) || args.output }catch(err){ colorLog(`❌ plugin ${e.name} ${hook}: ${err.message}`, 'red') }
-    return args.output
+    let plugResult;
+    try { plugResult = e.plugin[hook](args) } catch(err) { colorLog(`❌ plugin ${e.name} ${hook}: ${err.message}`, 'red') }
+    return (hook === 'beforeFile' && plugResult === false) ? plugResult : (plugResult || s);
   }, args.output)
 }
 
